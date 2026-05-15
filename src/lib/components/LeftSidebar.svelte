@@ -88,7 +88,7 @@
         </div>
       {/each}
     </div>
-    <a href="/" class="show-more">Mostra tutti →</a>
+    <a href="./" class="show-more">Mostra tutti →</a>
   </div>
 
   <div class="card">
@@ -98,7 +98,7 @@
         <div class="group-item">{group}</div>
       {/each}
     </div>
-    <a href="/" class="show-more">Mostra tutti →</a>
+    <a href="./" class="show-more">Mostra tutti →</a>
   </div>
 
   <div class="card">
@@ -111,7 +111,7 @@
         </div>
       {/each}
     </div>
-    <a href="/" class="show-more">Mostra tutti →</a>
+    <a href="./" class="show-more">Mostra tutti →</a>
   </div>
 </aside>
 

@@ -79,21 +79,21 @@
 
   <div class="footer-links">
     <div class="footer-row">
-      <a href="/">Info</a>
-      <a href="/">Accessibilità</a>
-      <a href="/">Centro assistenza</a>
+      <a href="./">Info</a>
+      <a href="./">Accessibilità</a>
+      <a href="./">Centro assistenza</a>
     </div>
     <div class="footer-row">
-      <a href="/">Privacy & Termini</a>
-      <a href="/">Scelte pubblicitarie</a>
+      <a href="./">Privacy & Termini</a>
+      <a href="./">Scelte pubblicitarie</a>
     </div>
     <div class="footer-row">
-      <a href="/">Pubblicità</a>
-      <a href="/">Servizi alle aziende</a>
+      <a href="./">Pubblicità</a>
+      <a href="./">Servizi alle aziende</a>
     </div>
     <div class="footer-row">
-      <a href="/">Scarica l'app PromessiLink</a>
-      <a href="/">Altro</a>
+      <a href="./">Scarica l'app PromessiLink</a>
+      <a href="./">Altro</a>
     </div>
     <p class="copyright">PromessiLink Corporation &copy; 1628-2026</p>
   </div>
