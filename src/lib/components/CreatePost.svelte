@@ -4,7 +4,7 @@
   const renzo = {
     name: 'Renzo Tramaglino',
     avatar: 'RT',
-    avatarImg: '/images/renzo.jpg'
+    avatarImg: './images/renzo.jpg'
   }
 </script>
 

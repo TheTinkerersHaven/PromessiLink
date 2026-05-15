@@ -7,15 +7,15 @@
     headline: 'Filatore | Operaio specializzato | In cerca di nuove opportunità',
     avatar: 'RT',
     avatarColor: '#2d6a4f',
-    avatarImg: '/images/renzo.jpg',
+    avatarImg: './images/renzo.jpg',
   }
 
   const connections = [
-    { name: 'Agnese Mondella', headline: 'Mamma di Lucia', avatarImg: '/images/agnese.jpg' },
-    { name: 'Lucia Mondella', headline: 'Filatrice', avatarImg: '/images/lucia.jpg' },
-    { name: 'Fra Cristoforo', headline: 'Cappuccino', avatarImg: '/images/fra_cristoforo.jpg' },
-    { name: 'Don Abbondio', headline: 'Curato', avatarImg: '/images/don_abbondio.jpg' },
-    { name: 'L\'Innominato', headline: 'Ex tiranno', avatarImg: '/images/innominato.jpg' },
+    { name: 'Agnese Mondella', headline: 'Mamma di Lucia', avatarImg: './images/agnese.jpg' },
+    { name: 'Lucia Mondella', headline: 'Filatrice', avatarImg: './images/lucia.jpg' },
+    { name: 'Fra Cristoforo', headline: 'Cappuccino', avatarImg: './images/fra_cristoforo.jpg' },
+    { name: 'Don Abbondio', headline: 'Curato', avatarImg: './images/don_abbondio.jpg' },
+    { name: 'L\'Innominato', headline: 'Ex tiranno', avatarImg: './images/innominato.jpg' },
   ]
 
   const groups = [
@@ -44,7 +44,7 @@
 
 <aside class="sidebar">
   <div class="card profile-card" onclick={() => router.navigate('profile', { slug: 'renzo-tramaglino' })} onkeydown={(e) => e.key === 'Enter' && router.navigate('profile', { slug: 'renzo-tramaglino' })} role="button" tabindex="0">
-    <div class="profile-banner" style="background: url('/images/banners/renzo.jpg') center / cover, linear-gradient(135deg, #2d6a4f, #52b788);"></div>
+    <div class="profile-banner" style="background: url('./images/banners/renzo.jpg') center / cover, linear-gradient(135deg, #2d6a4f, #52b788);"></div>
     <div class="profile-info">
       {#if profile.avatarImg}
         <img class="profile-avatar-img" src={profile.avatarImg} alt={profile.name} />

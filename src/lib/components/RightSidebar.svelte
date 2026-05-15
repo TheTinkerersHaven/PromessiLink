@@ -14,14 +14,14 @@
       headline: 'Arcivescovo di Milano | Teologo',
       avatar: 'CF',
       color: '#6b3a2a',
-      avatarImg: '/images/cardinale_federigo.jpg',
+      avatarImg: './images/cardinale_federigo.jpg',
     },
     {
       name: 'Agnese Mondella',
       headline: 'Mamma | Consulente matrimoniale',
       avatar: 'AM',
       color: '#b5835a',
-      avatarImg: '/images/agnese.jpg',
+      avatarImg: './images/agnese.jpg',
     },
     {
       name: 'Tonio',
