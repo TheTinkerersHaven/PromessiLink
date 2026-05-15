@@ -5,6 +5,7 @@
   import Feed from './lib/components/Feed.svelte'
   import RightSidebar from './lib/components/RightSidebar.svelte'
   import ProfilePage from './lib/pages/ProfilePage.svelte'
+  import NewsPage from './lib/pages/NewsPage.svelte'
   import { router } from './lib/stores/router.js'
 
   let route = $state(get(router))
@@ -19,6 +20,8 @@
 <main class="layout">
   {#if route.page === 'profile'}
     <ProfilePage slug={route.params.slug} />
+  {:else if route.page === 'news'}
+    <NewsPage slug={route.params.slug} />
   {:else}
     <LeftSidebar />
     <Feed />

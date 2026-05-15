@@ -9,6 +9,10 @@ function createRouter() {
       const slug = hash.split('/')[2]
       initial.page = 'profile'
       initial.params = { slug }
+    } else if (hash.startsWith('/news/')) {
+      const slug = hash.split('/')[2]
+      initial.page = 'news'
+      initial.params = { slug }
     }
   }
 
@@ -20,6 +24,8 @@ function createRouter() {
       window.location.hash = ''
     } else if (page === 'profile') {
       window.location.hash = `#/profile/${params.slug}`
+    } else if (page === 'news') {
+      window.location.hash = `#/news/${params.slug}`
     }
   }
 
@@ -29,6 +35,9 @@ function createRouter() {
       if (hash.startsWith('/profile/')) {
         const slug = hash.split('/')[2]
         set({ page: 'profile', params: { slug } })
+      } else if (hash.startsWith('/news/')) {
+        const slug = hash.split('/')[2]
+        set({ page: 'news', params: { slug } })
       } else {
         set({ page: 'feed', params: {} })
       }

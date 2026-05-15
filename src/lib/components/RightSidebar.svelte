@@ -1,11 +1,13 @@
 <script>
+  import { router } from '../stores/router.js'
+
   const trending = [
-    { topic: 'Rivolta del pane a Milano', posts: '47K post' },
-    { topic: 'Don Rodrigo: nuove intimidazioni', posts: '23K post' },
-    { topic: 'Peste del 1630 - bollettino', posts: '18K post' },
-    { topic: 'Matrimonio Renzo & Lucia', posts: '12K post' },
-    { topic: 'Cardinale Borromeo in visita', posts: '8.4K post' },
-    { topic: 'L\'Innominato si converte?', posts: '6.2K post' },
+    { topic: 'Rivolta del pane a Milano', slug: 'rivolta-pane', posts: '47K post' },
+    { topic: 'Don Rodrigo: nuove intimidazioni', slug: 'intimidazioni-don-rodrigo', posts: '23K post' },
+    { topic: 'Peste del 1630 - bollettino', slug: 'peste-1630', posts: '18K post' },
+    { topic: 'Matrimonio Renzo & Lucia', slug: 'matrimonio-renzo-lucia', posts: '12K post' },
+    { topic: 'Cardinale Borromeo in visita', slug: 'cardinale-borromeo', posts: '8.4K post' },
+    { topic: 'L\'Innominato si converte?', slug: 'conversione-innominato', posts: '6.2K post' },
   ]
 
   const suggested = [
@@ -42,7 +44,7 @@
     </div>
     <div class="news-list">
       {#each trending as item, i}
-        <div class="news-item">
+        <div class="news-item" onclick={() => router.navigate('news', { slug: item.slug })} onkeydown={(e) => e.key === 'Enter' && router.navigate('news', { slug: item.slug })} role="button" tabindex="0">
           <span class="news-number">{i + 1}</span>
           <div class="news-content">
             <span class="news-title">{item.topic}</span>
