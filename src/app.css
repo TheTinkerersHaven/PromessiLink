@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --linkedin-primary: #8B2500;
+  --linkedin-bg: #f5efe6;
+  --linkedin-white: #fefcf7;
+  --linkedin-black: #2c1810;
+  --linkedin-gray: #8b7355;
+  --linkedin-light-gray: #d4c5a9;
+  --linkedin-hover: #ede5d8;
+  --linkedin-primary-dark: #5c1a00;
+  --linkedin-green: #6b8f3a;
+  --navbar-height: 52px;
+}
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  background-color: var(--linkedin-bg);
+  color: var(--linkedin-black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--linkedin-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 48px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
