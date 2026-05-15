@@ -3,7 +3,9 @@ dist/
 bun.lock
 .yarn/
 *.local
+*.bak
 .env
 .env.*
 .DS_Store
 *.log
+promessisposi.epub

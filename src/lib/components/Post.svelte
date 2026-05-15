@@ -4,6 +4,8 @@
 
   let { post } = $props()
 
+  const isCurrentUser = post.author.name === 'Renzo Tramaglino'
+
   let liked = $state(false)
   // svelte-ignore state_referenced_locally
   let likeCount = $state(post.likes)
@@ -28,7 +30,7 @@
 <article class="post">
   <div class="post-header">
     {#if post.author.avatarImg}
-      <img class="post-author-avatar-img" src={post.author.avatarImg} alt={post.author.name} />
+      <img class="post-author-avatar-img{isCurrentUser ? ' current-user-ring' : ''}" src={post.author.avatarImg} alt={post.author.name} />
     {:else}
       <div class="post-author-avatar" style="background: {post.author.avatarColor}">
         {post.author.avatar}
@@ -37,7 +39,7 @@
     <div class="post-author-info">
       <span class="post-author-name" onclick={goToProfile} onkeydown={(e) => e.key === 'Enter' && goToProfile()} role="button" tabindex="0">{post.author.name}</span>
       <span class="post-headline">{post.author.headline}</span>
-      <span class="post-time">{post.timeAgo}</span>
+      <span class="post-time">{post.timeAgo}{#if isCurrentUser} · <span class="you-label">Tu</span>{/if}</span>
     </div>
     <button class="more-btn" aria-label="More options">
       <svg viewBox="0 0 16 16" width="16" height="16" fill="#666">
@@ -140,6 +142,14 @@
     color: var(--linkedin-primary);
     cursor: pointer;
     text-decoration: underline;
+  }
+  .current-user-ring {
+    outline: 2px solid var(--linkedin-primary);
+    outline-offset: 1px;
+  }
+  .you-label {
+    font-weight: 600;
+    color: var(--linkedin-primary);
   }
   .post-headline {
     font-size: 12px;

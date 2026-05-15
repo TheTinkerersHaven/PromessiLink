@@ -9,7 +9,7 @@
   function timeAgoToMinutes(str) {
     if (str.endsWith('m')) return parseInt(str)
     if (str.endsWith('h')) return parseInt(str) * 60
-    if (str.endsWith('d')) return parseInt(str) * 1440
+    if (str.endsWith('d') || str.endsWith('g')) return parseInt(str) * 1440
     return 0
   }
 
@@ -40,7 +40,7 @@
   const displayedPosts = $derived(
     showMyPosts
       ? sortedPosts.filter(p => p.author.name === 'Renzo Tramaglino')
-      : sortedPosts.filter(p => p.author.name !== 'Renzo Tramaglino')
+      : sortedPosts
   )
 </script>
 
