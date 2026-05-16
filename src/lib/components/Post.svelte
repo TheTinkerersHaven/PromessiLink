@@ -12,10 +12,7 @@
 
   function goToProfile() {
     const authorName = post.author.name
-    const char = characters.find(c =>
-      c.name === authorName ||
-      authorName.toLowerCase().includes(c.name.split(' ')[0].toLowerCase())
-    )
+    const char = characters.find(c => c.name === authorName)
     if (char) {
       router.navigate('profile', { slug: char.slug })
     }

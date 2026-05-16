@@ -26,10 +26,7 @@
   ]
 
   function goToProfile(name) {
-    const char = characters.find(c =>
-      c.name === name ||
-      name.toLowerCase().includes(c.name.split(' ')[0].toLowerCase())
-    )
+    const char = characters.find(c => c.name === name)
     if (char) {
       router.navigate('profile', { slug: char.slug })
     }

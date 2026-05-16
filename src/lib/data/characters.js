@@ -148,7 +148,5 @@ export function getCharacterBySlug(slug) {
 }
 
 export function getCharacterByName(name) {
-  return characters.find(
-    c => c.name === name || c.name.startsWith(name.split(' ')[0])
-  )
+  return characters.find(c => c.name === name)
 }
